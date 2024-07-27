@@ -1,9 +1,12 @@
+/* Universal selector to reset margins, padding, and set the font */
 * {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+
+/* Hero section styling */
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -13,18 +16,27 @@
   justify-content: center;
   flex-direction: column;
   color: #fff;
+  padding: 20px;
 }
+
+/* Hero section heading styling */
 .hero h1 {
-  font-size: 105px;
+  font-size: 7vw; /* Adjusted for responsive sizing */
   font-weight: 700;
   margin-top: -50px;
   margin-bottom: 50px;
+  text-align: center; /* Centered text for better appearance on small screens */
 }
+
+/* Styling for highlighted text within the heading */
 .hero h1 span {
   color: #e20e0e;
 }
+
+/* Textarea styling */
 textarea {
-  width: 700px;
+  width: 80%; /* Adjusted for responsive sizing */
+  max-width: 700px; /* Ensure it doesn't exceed the max width */
   height: 300px;
   background: #119cd3dd;
   color: #fff;
@@ -36,16 +48,25 @@ textarea {
   resize: none;
   margin-bottom: 30px;
 }
+
+/* Placeholder text styling for the textarea */
 textarea::placeholder {
   font-size: 16px;
   color: #ddd;
 }
+
+/* Row styling to align items horizontally */
 .row {
-  width: 600px;
+  width: 90%; /* Adjusted for responsive sizing */
+  max-width: 600px; /* Ensure it doesn't exceed the max width */
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center; /* Center items on smaller screens */
 }
+
+/* Button styling */
 button {
   background: #ff2963;
   color: #fff;
@@ -57,11 +78,16 @@ button {
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin: 10px 0; /* Add margin for better spacing on smaller screens */
 }
+
+/* Styling for images within the button */
 button img {
   width: 16px;
   margin-right: 10px;
 }
+
+/* Select dropdown styling */
 select {
   flex: 1;
   color: #fff;
@@ -77,4 +103,44 @@ select {
   background-size: 15px;
   background-position-x: calc(100% - 20px);
   background-position-y: 20px;
+  margin: 10px 0; /* Add margin for better spacing on smaller screens */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 9vw;
+  }
+
+  textarea {
+    width: 90%;
+    height: 200px;
+  }
+
+  .row {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 12vw;
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
 }
