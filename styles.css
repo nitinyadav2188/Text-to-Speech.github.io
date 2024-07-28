@@ -1,0 +1,246 @@
+/* Section styling */
+.sections{
+    display: flex;
+    flex-direction: column;
+}
+.section {
+    width: 100%;
+    padding: 60px 20px;
+    background: linear-gradient(205deg, #4facfe, #00f2fe);
+color: white;
+    text-align: center;
+  }
+    
+  .section .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+    gap: 20px; /* Space between the text and image */
+  }
+  
+  .section .text {
+    flex: 1;
+    min-width: 300px; /* Ensure the text has a minimum width */
+  }
+  
+  .section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px; /* Space for the underline */
+  }
+  
+  .section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.5s ease, left 0.5s ease;
+  }
+  
+  .section h2:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .section p {
+    background: none;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .section .image {
+    flex: 1;
+    min-width: 300px; /* Ensure the image has a minimum width */
+    text-align: center; /* Center the image on smaller screens */
+  }
+  
+  .section .image img {
+    max-width: 100%;
+    border-radius: 10px; /* Add some rounding to the image corners */
+  }
+  
+  /* Add spacing for sections */
+  #about, #services, #contact {
+    padding-top: 60px; /* Adjust if needed for your header height */
+    margin-top: -10px; /* Negative margin to offset the padding */
+  }
+  /* Additional styling */
+@media (max-width: 768px) {
+    .section h2 {
+      font-size: 28px;
+    }
+  
+    .section p {
+      font-size: 16px;
+    }
+    .section .content {
+        flex-direction: column; /* Stack the text and image vertically */
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .section h2 {
+      font-size: 24px;
+    }
+  
+    .section p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Contact Section Styling */
+#contact {
+    padding: 60px 20px;
+    background: linear-gradient(205deg, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+  }
+  
+  #contact .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  #contact .text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  #contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px; /* Space for the underline */
+  }
+  
+  #contact h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.5s ease, left 0.5s ease;
+  }
+  
+  #contact h2:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  #contact p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+    text-align: left;
+  }
+
+  .contact-form {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items:center; 
+    width: 800px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-form .form-group label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #ddd;
+  }
+  
+  .contact-form .form-group input,
+  .contact-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .contact-form .form-group input {
+    height: 40px;
+    width: 300px;
+  }
+  
+  .contact-form .form-group textarea {
+    resize: none;
+    height: 100px;
+    width: 300px;
+  }
+  
+  .contact-form button {
+    align-self: center;
+    background: #ff2963;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 35px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content{
+    display: flex;
+    flex-direction: row;
+  }
+  .form-group{
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /* scrollbar for the website */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #119cd3dd; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e94e2; /* Color of the scroll thumb */
+    border-radius: 10px; /* Round the corners of the scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0e6ae2; /* Color of the scroll thumb on hover */
+}
