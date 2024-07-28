@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Text-to-Speech</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div class="hero">
+  <div id="home" class="hero">
     <h1>Text-to-Speech <span>Converter</span></h1>
 
     <textarea placeholder="Write anything here...."></textarea>
@@ -20,7 +21,99 @@
     </div>
 
   </div>
-  <script src="script.js"></script>
+
+  <div class="sections">
+
+    <!-- About Section -->
+    <div id="about" class="section">
+      <div class="content">
+        <div class="text">
+          <h2>About Us</h2>
+          <p>Our company is dedicated to providing excellent service and quality products. We pride ourselves on our
+            commitment to customer satisfaction and our ability to deliver top-notch solutions.</p>
+        </div>
+        <div class="image">
+          <img src="images/Web-Development-Services.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="section">
+      <div class="content">
+        <div class="image">
+          <img src="images/web-development-company.jpg" alt="" width="600px" height="300px">
+        </div>
+        <div class="text">
+          <h2>Our Services</h2>
+          <p>We offer a wide range of services to meet your needs, including web development, digital marketing, and
+            graphic design. Our team of experts is here to help you achieve your business goals.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+      <div class="content">
+        <div class="text">
+          <h2>Contact Us</h2>
+          <h4>We Value Your Feedback:</h4>
+          <p>At Nitin Yadav, we are dedicated to providing exceptional service and support. Your feedback is invaluable
+            to us as we continually strive to improve and exceed your expectations. Whether you have questions,
+            suggestions, or need assistance, we are here to help.
+          </p>
+          <h4>How to Reach Us:</h4>
+          <p>Please fill out the form below with your details and remarks. Our team will review your message and get
+            back to you as soon as possible. We appreciate your time and look forward to hearing from you.
+          </p>
+        </div>
+
+        <div class="contact-form">
+          <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="ebe891fa-bf12-48eb-bcea-6bd039fc8136">
+            <!-- <form action="mailto:whitedevil2188@gmail.com" method="post" enctype="text/plain"> -->
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="enter you name..." required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your remarks.........." required></textarea>
+            </div>
+            <button type="submit">Send </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/nitinyadav2188"><img width="64" height="64"
+              src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" /></a>
+          <a href="https://x.com/NITINYADAV2188"><img width="64" height="64"
+              src="https://img.icons8.com/color/48/twitterx--v1.png" alt="twitterx--v1" /></a>
+          <a href="https://www.linkedin.com/in/nitin-yadav-681850299/"><img width="64" height="64"
+              src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin" /></a>
+        </div>
+        <div class="footer-copyright">
+          &copy; 2024 Nitn Yadav. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
