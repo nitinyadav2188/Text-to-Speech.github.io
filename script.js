@@ -22,3 +22,23 @@ document.querySelector("button"),addEventListener("click",()=>{
     speech.text=document.querySelector("textarea").value;
     window.speechSynthesis.speak(speech);
 });
+
+//smooth scrolling k liye
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.footer-links a');
+
+    for (const link of links) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    }
+  });
